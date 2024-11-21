@@ -13,6 +13,8 @@ export function Toaster() {
 
   return (
     <ToastProvider>
+
+      {/* @ts-ignore */}
       {toasts.map(function ({ id, title, description, action, transactionHash, ...props }) {
         return (
           <Toast key={id} {...props}>

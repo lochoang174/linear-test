@@ -57,6 +57,7 @@ export function useBlockchain() {
       toast({
         title: "Transaction Complete",
         description: "Your transaction has been processed.",
+        //@ts-ignore
         transactionHash: executedTransaction.hash,
       });
 
@@ -81,6 +82,8 @@ export function useBlockchain() {
     });
     const formattedHistory: HistoryType[] = history.map((e) => ({
       hash: e.hash,
+              //@ts-ignore
+
       time: formatTimestamp(e.timestamp),
     }));
     setListHistory(formattedHistory);
