@@ -1,7 +1,7 @@
 #   Aptos Token Transfer DApp
 
 Project Linear cho phép người dùng transfer token trên blockchain Aptos, được xây dựng với React.
-
+link: https://linear-six.vercel.app/
 ## Tổng quan
 
 - **Kết nối ví**: Hỗ trợ Petra Wallet, Martian Wallet và các ví Aptos phổ biến khác
@@ -52,4 +52,6 @@ npm run dev
 3. Nhập địa chỉ ví người nhận
 4. Nhập số lượng token
 5. Xác nhận giao dịch qua ví của bạn
+## Video demo
+https://github.com/user-attachments/assets/10b0e556-1047-4f3d-a7ca-d1d1e76cccc7
 
