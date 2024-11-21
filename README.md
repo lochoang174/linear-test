@@ -1,50 +1,55 @@
-# React + TypeScript + Vite
+#   Aptos Token Transfer DApp
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Project Linear cho phép người dùng transfer token trên blockchain Aptos, được xây dựng với React.
 
-Currently, two official plugins are available:
+## Tổng quan
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Kết nối ví**: Hỗ trợ Petra Wallet, Martian Wallet và các ví Aptos phổ biến khác
+- **Transfer Token**: Chuyển các loại token trên mạng Aptos
+- **Token Balance**: Xem số dư các loại token trong ví
+- **Transaction History**: Theo dõi lịch sử giao dịch
+- **Multi-token Support**: Hỗ trợ APT và các token khác trên Aptos
 
-## Expanding the ESLint configuration
+## Công nghệ sử dụng
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- React 18
+- TypeScript
+- Vite
+- TailwindCSS
+- Aptos Web3 SDK
+- Wallet Adapters
 
-- Configure the top-level `parserOptions` property like this:
+## Yêu cầu hệ thống
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- Node.js 16+ 
+- Một trong các ví Aptos (Petra, Martian, etc.)
+- Testnet/Mainnet APT để thanh toán gas fee
+
+## Hướng dẫn cài đặt
+
+1. Clone repository:
+```bash
+https://github.com/lochoang174/linear-test.git
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+2. Cài đặt dependencies:
+```bash
+npm install
 ```
+
+
+3. Chạy ứng dụng ở môi trường development:
+```bash
+npm run dev
+```
+
+Ứng dụng sẽ chạy tại `http://localhost:5173`
+
+## Cách sử dụng
+
+1. Kết nối ví Aptos của bạn với ứng dụng
+2. Faucet cho account nếu chưa có token, Link faucet: https://www.aptosfaucet.com/
+3. Nhập địa chỉ ví người nhận
+4. Nhập số lượng token
+5. Xác nhận giao dịch qua ví của bạn
+
